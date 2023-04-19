@@ -78,7 +78,7 @@ class Command(BaseCommand):
         tg_user.save(update_fields=["verification_code"])
         self.tg_client.send_message(
             message.chat.id,
-            f"Для подтверждения необходимо ввести код: {tg_user.verification_code}, на сайте 'http://freddyadams.ga/'",
+            f"Для подтверждения необходимо ввести код: {tg_user.verification_code}, на сайте",
         
 
         )
