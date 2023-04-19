@@ -1,6 +1,5 @@
 from django.contrib.auth import authenticate
 from django.contrib.auth.hashers import make_password
-from django.contrib.auth.password_validation import validate_password
 from rest_framework import serializers
 from rest_framework.exceptions import ValidationError
 
@@ -45,7 +44,7 @@ class LoginSerializer(serializers.ModelSerializer):
         read_only_fields = ("id", "first_name", "last_name", "email")
 
 
-class UserSerializer(serializers.ModelSerializer):
+class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         read_only_fields = ("id",)
