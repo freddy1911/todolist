@@ -5,6 +5,6 @@ from todolist.core.views import SignUpView, LoginView, ProfileView, UpdatePasswo
 urlpatterns = [
     path('signup', SignUpView.as_view(), name='signup'),
     path('login', LoginView.as_view(), name='login'),
-    path('user', ProfileView.as_view(), name='user'),
+    path('profile', ProfileView.as_view(), name='user'),
     path('update_password', UpdatePasswordView.as_view(), name='update_password'),
 ]
