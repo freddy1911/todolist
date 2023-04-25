@@ -22,6 +22,8 @@ django-filter = "^23.1"
 marshmallow = "^3.19.0"
 marshmallow-dataclass = "^8.5.12"
 drf-spectacular = "^0.26.2"
+pytest-factoryboy = "^2.5.1"
+pytest-django = "^4.5.2"
 
 [tool.poetry.group.dev.dependencies]
 django-extensions = "^3.2.1"
