@@ -7,7 +7,6 @@ RUN pip install "poetry=$POETRY_VERSION"
 WORKDIR /opt
 COPY poetry.lock pyproject.toml ./
 
-RUN 
 RUN poetry config virtualenvs.create false \
     && poetry install --no-root \
     && poetry lock --no-update
