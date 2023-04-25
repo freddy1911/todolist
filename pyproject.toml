@@ -25,12 +25,6 @@ drf-spectacular = "^0.26.2"
 pytest-factoryboy = "^2.5.1"
 pytest-django = "^4.5.2"
 
-[tool.pytest.ini_options]
-DJANGO_SETTINGS_MODULE = 'todolist.settings'
-python_files = [
-    'tests.py',
-    'tests_*.py'
-
 [tool.poetry.group.dev.dependencies]
 django-extensions = "^3.2.1"
 
