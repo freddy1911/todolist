@@ -20,7 +20,7 @@ class MessageFrom:
 
 @dataclass
 class Chat:
-     """Telegram API: https://core.telegram.org/bots/api#chat"""
+    """Telegram API: https://core.telegram.org/bots/api#chat"""
     id: int
     type: str
     first_name: str | None = None
@@ -66,7 +66,7 @@ class GetUpdatesResponse:
 
 @dataclass
 class SendMessageResponse:
-     """https://core.telegram.org/bots/api#sendmessage"""
+    """https://core.telegram.org/bots/api#sendmessage"""
     ok: bool
     result: Message
     Schema: ClassVar[type[Schema]] = Schema
