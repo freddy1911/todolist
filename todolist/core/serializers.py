@@ -8,6 +8,7 @@ from todolist.core.fields import PasswordField
 
 
 class CreateUserSerializer(serializers.ModelSerializer):
+    """Serializer for `Create User`"""
     password = PasswordField()
     password_repeat = PasswordField()
 
@@ -27,6 +28,7 @@ class CreateUserSerializer(serializers.ModelSerializer):
 
 
 class LoginSerializer(serializers.ModelSerializer):
+    """Serializer for Login`"""
     username = serializers.CharField(required=True)
     password = PasswordField()
 
@@ -45,6 +47,7 @@ class LoginSerializer(serializers.ModelSerializer):
 
 
 class ProfileSerializer(serializers.ModelSerializer):
+    """Serializer for `Profile`"""
     class Meta:
         model = User
         read_only_fields = ("id",)
@@ -58,6 +61,7 @@ class ProfileSerializer(serializers.ModelSerializer):
 
 
 class UpdatePasswordSerializer(serializers.Serializer):
+    """Serializer for `Update Password`"""
     old_password = PasswordField(required=True)
     new_password = PasswordField(required=True)
 
