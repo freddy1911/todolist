@@ -1,27 +1,27 @@
-                     todolist - Приложение для отслеживания выполнения задач
+Todolist - Приложение для отслеживания выполнения задач
                      
                                 
-            Backend stack: 
+Backend stack: 
             
-            1) Django RestFramework
-            2) Python
-            3) Postgres
+1) Django RestFramework
+2) Python
+3) Postgres
             
             
             
-            Запуск Проекта:
+Запуск Проекта:
             
-            1) Клонировать репозиторий по ссылке
-            git clone https://github.com/example
+1) Клонировать репозиторий по ссылке
+              git clone https://github.com/example
             
-            2) Установка зависимостей:
-            pip install -r requirements.txt
+2) Установка зависимостей:
+              pip install -r requirements.txt
             
-            3) Закатить миграции:
-            ./manage.py makemigrations- создаем миграции
-            ./manage.py migrate - накатываем миграции
+3) Закатить миграции:
+             ./manage.py makemigrations- создаем миграции
+             ./manage.py migrate - накатываем миграции
             
-            4) Docker build
+4) Docker build
              docker pull python:3.10.7-slim
              poetry add gunicorn - установка gunicorn
              docker-compose up -d db - запуск базы
@@ -32,12 +32,12 @@
              docker-compose exec api /bin/bash - вход в контейнер
              ls -la - просмотр что содержит
             
-            5) Создаем Суперпользователя:
+5) Создаем Суперпользователя:
             python manage.py createsuperuser
             
-            6) Запустить проект
+6) Запустить проект
             
-            Учебный дипломный проект - приложение для планирования целей с реализацией:
+Учебный дипломный проект - приложение для планирования целей с реализацией:
 
 1) Вход/регистрация/аутентификация через вк.
 2) Создание целей.
