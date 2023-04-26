@@ -5,7 +5,7 @@ from todolist.bot.models import TgUser
 
 
 class TgUserSerializer(serializers.ModelSerializer):
-     """Telegram User serializer"""
+    """Telegram User serializer"""
     verification_code = serializers.CharField(write_only=True)
 
     class Meta:
