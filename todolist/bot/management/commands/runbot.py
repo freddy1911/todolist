@@ -20,6 +20,7 @@ class States(Flag):
 
 
 class Command(BaseCommand):
+    """start bot from manage.py"""
     help = "start bot"
 
     def __init__(self, *args, **kwargs):
