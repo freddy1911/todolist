@@ -12,10 +12,12 @@ from todolist.core.serializers import CreateUserSerializer, LoginSerializer, Pro
 # Create your views here.
 
 class SignUpView(generics.CreateAPIView):
+    """Create new user"""
     serializer_class = CreateUserSerializer
 
 
 class LoginView(generics.CreateAPIView):
+    """Login user"""
     serializer_class = LoginSerializer
 
     def create(self, request: Request, *args: Any, **kwargs: Any) -> Response:
@@ -26,6 +28,7 @@ class LoginView(generics.CreateAPIView):
 
 
 class ProfileView(generics.RetrieveUpdateDestroyAPIView):
+    """Profile View"""
     serializer_class = ProfileSerializer
     permission_classes = (IsAuthenticated,)
 
@@ -37,6 +40,7 @@ class ProfileView(generics.RetrieveUpdateDestroyAPIView):
 
 
 class UpdatePasswordView(generics.UpdateAPIView):
+    """Password Update"""
     permission_classes = (IsAuthenticated,)
     serializer_class = UpdatePasswordSerializer
 
