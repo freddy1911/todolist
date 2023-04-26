@@ -15,12 +15,14 @@ from todolist.goals.serializers import GoalCreateSerializer, GoalCategorySeriali
 # Board
 
 class BoardCreateView(CreateAPIView):
+    """Board Create"""
     model = Board
     permission_classes = [permissions.IsAuthenticated]
     serializer_class = BoardCreateSerializer
 
 
 class BoardListView(ListAPIView):
+    """Board List"""
     model = Board
     permission_classes = [permissions.IsAuthenticated, BoardPermissions]
     pagination_class = LimitOffsetPagination
@@ -38,6 +40,7 @@ class BoardListView(ListAPIView):
 
 
 class BoardView(RetrieveUpdateDestroyAPIView):
+    """Board View"""
     model = Board
     permission_classes = [permissions.IsAuthenticated, BoardPermissions]
     serializer_class = BoardSerializer
@@ -55,12 +58,14 @@ class BoardView(RetrieveUpdateDestroyAPIView):
 
 
 class GoalCategoryCreateView(CreateAPIView):
+    """Goal Create Category"""
     model = GoalCategory
     permission_classes = [permissions.IsAuthenticated]
     serializer_class = GoalCategoryCreateSerializer
 
 
 class GoalCategoryListView(ListAPIView):
+    """Goal List Category"""
     model = GoalCategory
     permission_classes = [permissions.IsAuthenticated]
     serializer_class = GoalCategorySerializer
@@ -79,6 +84,7 @@ class GoalCategoryListView(ListAPIView):
 
 
 class GoalCategoryView(RetrieveUpdateDestroyAPIView):
+    """Goal Category"""
     model = GoalCategory
     serializer_class = GoalCategorySerializer
     permission_classes = [permissions.IsAuthenticated, GoalCategoryPermissions]
@@ -96,12 +102,14 @@ class GoalCategoryView(RetrieveUpdateDestroyAPIView):
 # Goal
 
 class GoalCreateView(CreateAPIView):
+    """Goal Create"""
     model = Goal
     permission_classes = [permissions.IsAuthenticated]
     serializer_class = GoalCreateSerializer
 
 
 class GoalListView(ListAPIView):
+    """Goal List"""
     model = Goal
     permission_classes = [permissions.IsAuthenticated]
     serializer_class = GoalSerializer
@@ -121,6 +129,7 @@ class GoalListView(ListAPIView):
 
 
 class GoalView(RetrieveUpdateDestroyAPIView):
+    """Goal View"""
     model = Goal
     serializer_class = GoalSerializer
     permission_classes = [permissions.IsAuthenticated, GoalPermissions]
@@ -137,12 +146,14 @@ class GoalView(RetrieveUpdateDestroyAPIView):
 # Comment
 
 class CommentCreateView(CreateAPIView):
+    """Comment Create"""
     model = GoalComment
     serializer_class = CommentCreateSerializer
     permission_classes = [permissions.IsAuthenticated]
 
 
 class CommentView(RetrieveUpdateDestroyAPIView):
+    """Comment View"""
     model = GoalComment
     serializer_class = CommentSerializer
     permission_classes = [permissions.IsAuthenticated, CommentPermissions]
@@ -152,6 +163,7 @@ class CommentView(RetrieveUpdateDestroyAPIView):
 
 
 class CommentListView(ListAPIView):
+    """Comment List"""
     model = GoalComment
     serializer_class = CommentSerializer
     permission_classes = [permissions.IsAuthenticated]
